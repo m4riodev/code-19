@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import { 
     Container, 
-    Header, 
     Divider,
     Message 
 } from 'semantic-ui-react';
