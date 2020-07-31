@@ -13,6 +13,7 @@ import Nav from './components/Nav';
 import Register from './components/Register';
 import About from './components/About';
 import QrCode from './components/QrCode';
+import ChatBot from './components/ChatBot';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Nav />
                 <Segment style={{marginBottom: '20px'}}>
                     <Switch>
+                        <Route path="/dandara" component={ChatBot} />
                         <Route path="/qrcode" component={QrCode} />
                         <Route path="/about" component={About} />
                         <Route path="/" component={Register} />

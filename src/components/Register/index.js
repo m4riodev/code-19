@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import { 
     Header,
     Form,
@@ -48,13 +49,13 @@ class Register extends Component {
 
         let that = this;
 
-        setTimeout(function(){ 
+        // setTimeout(function(){ 
             that.setState({
                 loading: false,
                 submitted: false,
                 registered: true
             });
-        }, 3000);
+        // }, 3000);
     }
 
     render() {
@@ -94,7 +95,7 @@ class Register extends Component {
                     <Button type='submit' loading={loading} primary>Cadastrar</Button>
                     {registered && <Message positive>
                         <Message.Header>Cadastro efetuado!</Message.Header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Agora conheça nossa assistente <Link to='/dandara'>Dandara</Link></p>
                     </Message>}
                 </Form>
             </>    
