@@ -2,6 +2,5 @@
     applications:
     - name: code-19
       memory: 256M
-      random-route: true
       path: build/
       buildpacks: https://github.com/cloudfoundry/staticfile-buildpack
