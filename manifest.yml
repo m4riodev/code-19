@@ -4,4 +4,4 @@
       memory: 256M
       random-route: true
       path: build/
-      buildpacks: https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
+      buildpacks: https://github.com/cloudfoundry/staticfile-buildpack
