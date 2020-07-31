@@ -1,7 +1,13 @@
 {
   "name": "code-19",
   "version": "0.1.0",
+  "description": "Call for Code Hackathon BR 2020",
   "private": true,
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x",
+    "yarn": "1.x"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
