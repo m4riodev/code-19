@@ -17,7 +17,7 @@ import QrCode from './components/QrCode';
 function App() {
     return (
         <Router>
-            <Container style={{paddingTop: '10px'}}>
+            <Container style={{padding: '10px 0 20px'}}>
                 <Head />
                 <Nav />
                 <Segment style={{marginBottom: '20px'}}>
