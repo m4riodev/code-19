@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { 
     Header,
     Form,
@@ -17,7 +17,8 @@ class Register extends Component {
             email: '',
             loading: false,
             registered: false,
-            submitted: false
+            submitted: false,
+            chatbot: false
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,18 +50,26 @@ class Register extends Component {
 
         let that = this;
 
-        // setTimeout(function(){ 
+        setTimeout(function(){ 
             that.setState({
                 loading: false,
                 submitted: false,
                 registered: true
             });
-        // }, 3000);
+        }, 3000);
+
+        setTimeout(function(){ 
+            that.setState({
+                chatbot: true
+            });
+        }, 6000); 
     }
 
     render() {
-        const { name, email, registered, loading, submitted } = this.state;
+        const { name, email, registered, loading, submitted, chatbot } = this.state;
         
+        if(chatbot) return <Redirect to="/dandara" />;
+
         return (
             <>
                 <Header as='h2'>
@@ -95,7 +104,7 @@ class Register extends Component {
                     <Button type='submit' loading={loading} primary>Cadastrar</Button>
                     {registered && <Message positive>
                         <Message.Header>Cadastro efetuado!</Message.Header>
-                        <p>Agora conheça nossa assistente <Link to='/dandara'>Dandara</Link></p>
+                        <p>Agora diga "oi" para a <Link to='/dandara'>Dandara</Link>.</p>
                     </Message>}
                 </Form>
             </>    
