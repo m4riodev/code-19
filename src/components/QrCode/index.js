@@ -9,10 +9,12 @@ import {
     Container
 } from 'semantic-ui-react';
 import QRCode from "react-qr-code";
+import ReactToPrint from 'react-to-print';
+import QrCodeToPrint from './QrCodeToPrint';
 
 class QrCode extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             place: '', 
             address: '',
@@ -103,10 +105,16 @@ class QrCode extends Component {
                     <>
                         <Divider style={{marginBottom: '30px'}} />
                         <Container textAlign='center'>
-                            <QRCode value={`${place} - ${address}`} />
+                            <QRCode value={`${window.location.origin}?n=${place}&a=${address}`} />
                         </Container>
                         <Divider style={{marginTop: '30px'}} />
-                        <Button type='button' primary>Imprimir</Button>
+                        <ReactToPrint
+                            trigger={() => {
+                                return <Button type='button' primary>Imprimir</Button>;
+                            }}
+                            content={() => this.componentRef}
+                        />
+                        <div style={{ display: "none" }}><QrCodeToPrint ref={el => (this.componentRef = el)} address={`${window.location.origin}?n=${place}&a=${address}`}  value={`${place} - ${address}`} /></div>
                     </>
                 }
             </>
