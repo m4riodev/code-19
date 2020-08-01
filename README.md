@@ -4,9 +4,12 @@ The master in the art of living makes little distinction between his work and hi
 
 # ID-19 :: Call for Code Hackathon BR 2020
 
-*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Currently, with more people needing to get out of isolation, we will use the QR Code technology, to identify places where you have been and if someone diagnosed with Covid-19 passed through the same place, we will inform you, so that you are alert to possible symptoms. And through Watson's AI, we will pass on relevant information about the pandemic and its consequences. All this always prioritizing the privacy of everyone.
+
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
